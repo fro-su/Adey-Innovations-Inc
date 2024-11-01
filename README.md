@@ -124,3 +124,116 @@ Adey-Innovations-Inc/
    ```sh
    pip install -r requirements.txt
    ```
+
+### - Data Analysis and Preprocessing
+
+1. **Handle Missing Values**
+   - Impute or drop missing values.
+2. **Data Cleaning**
+   - Remove duplicates.
+   - Correct data types.
+3. **Exploratory Data Analysis (EDA)**
+   - Univariate analysis.
+   - Bivariate analysis.
+4. **Merge Datasets for Geolocation Analysis**
+   - Convert IP addresses to integer format.
+   - Merge `Fraud_Data.csv` with `IpAddress_to_Country.csv`.
+5. **Feature Engineering**
+   - Transaction frequency and velocity for `Fraud_Data.csv`.
+   - Time-based features for `Fraud_Data.csv` (e.g., hour_of_day, day_of_week).
+6. **Normalization and Scaling**
+7. **Encode Categorical Features**
+
+### - Model Building and Training
+
+1. **Data Preparation**
+   - Feature and target separation [‘Class’ (creditcard), ‘class’ (Fraud_Data)].
+   - Train-Test Split.
+2. **Model Selection**
+   - Compare performance of various models: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, MLP, CNN, RNN, LSTM.
+3. **Model Training and Evaluation**
+   - Training models for both credit card and fraud-data datasets.
+4. **MLOps Steps**
+   - Versioning and Experiment Tracking using tools like MLflow.
+
+### - Model Explainability
+
+1. **Using SHAP for Explainability**
+   - Install SHAP: `pip install shap`.
+   - Generate SHAP plots (Summary Plot, Force Plot, Dependence Plot).
+2. **Using LIME for Explainability**
+   - Install LIME: `pip install lime`.
+   - Generate LIME plots (Feature Importance Plot).
+
+### - Model Deployment and API Development
+
+1. **Setting Up the Flask API**
+   - Create the Flask application.
+   - Define API endpoints.
+   - Test the API.
+2. **Dockerizing the Flask Application**
+
+   - Create a Dockerfile.
+
+     ```Dockerfile
+     # Use an official Python runtime as a parent image
+     FROM python:3.8-slim
+
+     # Set the working directory in the container
+     WORKDIR /app
+
+     # Copy the current directory contents into the container at /app
+     COPY . .
+
+     # Install any needed packages specified in requirements.txt
+     RUN pip install -
+     ```
+
+## Learning Outcomes
+
+### Skills
+
+- Deploying machine learning models using Flask
+- Containerizing applications using Docker
+- Creating REST APIs for machine learning models
+- Testing and validating APIs
+- Developing end-to-end deployment pipelines
+- Implementing scalable and portable machine-learning solutions
+
+### Knowledge
+
+- Principles of model deployment and serving
+- Best practices for creating REST APIs
+- Understanding of containerization and its benefits
+- Techniques for real-time prediction serving
+- Security considerations in API development
+- Methods for monitoring and maintaining deployed models
+-
+
+## References
+
+#### Fraud Detection
+
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+https://www.kaggle.com/c/ieee-fraud-detection/code
+https://www.kaggle.com/datasets/vbinh002/fraud-ecommerce/code
+
+#### Modeling
+
+https://www.analyticsvidhya.com/blog/2021/08/conceptual-understanding-of-logistic-regression-for-data-science-beginners/
+https://www.analyticsvidhya.com/blog/2021/08/decision-tree-algorithm/
+https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/
+https://www.analyticsvidhya.com/blog/2022/03/a-brief-overview-of-recurrent-neural-networks-rnn/
+https://www.analyticsvidhya.com/blog/2021/03/introduction-to-long-short-term-memory-lstm/
+
+#### Model Explainability
+
+https://www.larksuite.com/en_us/topics/ai-glossary/model-explainability-in-ai
+https://www.datacamp.com/tutorial/explainable-ai-understanding-and-trusting-machine-learning-models
+
+#### Flask
+
+https://flask.palletsprojects.com/en/3.0.x/
+https://www.geeksforgeeks.org/flask-tutorial/
+
+## Author: Firew Ayele.
